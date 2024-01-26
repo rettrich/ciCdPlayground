@@ -14,12 +14,16 @@
     "transform": {
       "^.+\\.svelte$": "svelte-jester"
     },
-    "transformIgnorePatterns": ["/node_modules/"],
+    "transformIgnorePatterns": [
+      "/node_modules/"
+    ],
     "moduleFileExtensions": [
       "js",
       "svelte"
     ],
-    "extensionsToTreatAsEsm": [".svelte"],
+    "extensionsToTreatAsEsm": [
+      ".svelte"
+    ],
     "setupFilesAfterEnv": [
       "<rootDir>/node_modules/@testing-library/jest-dom"
     ],

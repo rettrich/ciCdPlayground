@@ -16,6 +16,7 @@ new App({
       "SonarQube",
       "Docker",
       "Kubernetes",
+	  "Build",
     ],
     // Which CI/CD tools do you use in your project?
     tools: "Jenkins, SonarQube",
