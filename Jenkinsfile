@@ -8,22 +8,30 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git checkout 'https://github.com/rettrich/ciCdPlayground'
-                yarn
-                yarn build
+                step {
+                    git 'https://github.com/rettrich/ciCdPlayground'
+                }
+                step {
+                    sh 'yarn'
+                    sh 'yarn build'
+                }
             }
         }
 
         stage('Test') {
             steps {
-                yarn test
-                yarn test:e2e
+                step {
+                    sh 'yarn test'
+                    sh 'yarn test:e2e'
+                }
             }
         }
 
         stage('Publish') {
             steps {
-                junit 'reports/*.xml'
+                step {
+                    junit 'reports/*.xml'
+                }
             }
         }
     }
